@@ -1,4 +1,4 @@
-const Signup = () => {
+const Signup = (props) => {
   return(
     <form className="signup-form">
       <h1>Create an Account</h1>
