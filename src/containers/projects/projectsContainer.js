@@ -14,13 +14,13 @@ class ProjectsContainer extends React.Component {
   }
 
   handleLoading = () => {
-    if (this.props.requesting || this.props.tags.requesting) {
+    if (this.props.posts.requesting || this.props.tags.requesting) {
       return <BlockReserveLoading />;
 
     } else {
       return(
         <div className="posts">
-          <ProjectList posts={this.props.posts.filter(project => project.category === "project")} tags={this.props.tags}/>
+          <ProjectList posts={this.props.posts.posts.filter(project => project.category === "project")} tags={this.props.tags.tags}/>
         </div>
       )
     }
@@ -34,9 +34,8 @@ class ProjectsContainer extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    posts: state.posts.posts,
-    requesting: state.posts.requesting,
-    tags: state.tags.tags
+    posts: state.posts,
+    tags: state.tags
   }
 }
 
