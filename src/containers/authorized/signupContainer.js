@@ -29,7 +29,7 @@ class SignupContainer extends React.Component {
     if (this.props.logged_in === false) {
       return(
         <div onChange={this.handleChange} onSubmit={this.handleSubmit}>
-          <SignupForm />
+          <SignupForm errors={this.props.errors}/>
         </div>)
     } else {
       return <Redirect to="/" />
@@ -47,7 +47,8 @@ class SignupContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    logged_in: state.account.logged_in
+    logged_in: state.account.logged_in,
+    errors: state.account.errors
   }
 }
 

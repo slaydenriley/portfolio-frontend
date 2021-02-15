@@ -17,6 +17,13 @@ iframe {
   display: flex;
 }
 
+.errors {
+  color: red;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px;
+}
+
 .new-post-container {
   display: flex;
 }

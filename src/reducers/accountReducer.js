@@ -19,7 +19,9 @@ export default function accountReducer(state = {logged_in: false, errors: null, 
 
     case "START_SIGNUP":
       return {
-        requesting: true
+        requesting: true,
+        logged_in: false,
+        admin: false
       }
 
     case "SIGNUP_USER":
