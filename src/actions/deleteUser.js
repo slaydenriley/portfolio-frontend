@@ -1,7 +1,7 @@
 export default function deleteUser(id) {
     return (dispatch) => {
         dispatch({ type: 'START_DELETING_USER' });
-        fetch(`https://slayden-frontend.herokuapp.com//users`, {
+        fetch(`https://slayden-backend.herokuapp.com/users`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

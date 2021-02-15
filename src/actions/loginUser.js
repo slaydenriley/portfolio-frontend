@@ -1,7 +1,7 @@
 export default function loginUser(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_LOGIN' });
-        fetch(`https://slayden-frontend.herokuapp.com//login`, {
+        fetch(`https://slayden-backend.herokuapp.com/login`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

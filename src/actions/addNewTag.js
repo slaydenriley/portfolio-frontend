@@ -1,7 +1,7 @@
 export default function addNewPost(tag) {
     return (dispatch) => {
         dispatch({ type: 'START_ADDING_TAG' });
-        fetch(`https://slayden-frontend.herokuapp.com//tags`, {
+        fetch(`https://slayden-backend.herokuapp.com/tags`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
