@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 //import Posts
 import PostsContainer from './containers/posts/postsContainer';
 import SinglePostContainer from './containers/posts/singlePostContainer';
+import { BlockReserveLoading } from 'react-loadingg';
 
 //import Projects
 import ProjectsContainer from './containers/projects/projectsContainer';
@@ -30,7 +31,7 @@ import Footer from "./components/Footer";
 
 class App extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loginStatus()
   }
 
@@ -70,23 +71,34 @@ class App extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <Router>
-        <div className="app">
-          <div className="app-body">
-            <NavBar logged_in={this.props.logged_in} admin={this.props.admin}/>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/posts" component={PostsContainer} />
-            <Route path="/posts/:id" component={SinglePostContainer} />
-            <Route exact path="/projects" component={ProjectsContainer} />
-            <Route path="/projects/:id" component={SingleProjectContainer} />
-            <Route path="/resume" component={Resume} />
-            {this.handleView()}
-            <Footer />
+  handleLoading = () => {
+    if (this.props.requesting) {
+      return <BlockReserveLoading />;
+    }
+    else {
+      return (
+        <Router>
+          <div className="app">
+            <div className="app-body">
+              <NavBar logged_in={this.props.logged_in} admin={this.props.admin}/>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/posts" component={PostsContainer} />
+              <Route path="/posts/:id" component={SinglePostContainer} />
+              <Route exact path="/projects" component={ProjectsContainer} />
+              <Route path="/projects/:id" component={SingleProjectContainer} />
+              <Route path="/resume" component={Resume} />
+              {this.handleView()}
+              <Footer />
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
+      )
+    }
+  }
+
+  render() {
+    return(
+      <>{this.handleLoading}</>
     )
   }
 };
@@ -94,7 +106,8 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
   return {
     logged_in: state.account.logged_in,
-    admin: state.account.admin
+    admin: state.account.admin,
+    requesting: state.account.requesting
   }
 }
 

@@ -37,11 +37,18 @@ export default function accountReducer(state = {logged_in: false, errors: null, 
         logged_in: false
       }
 
+    case "START_LOGIN_STATUS":
+      return {
+        ...state,
+        requesting: true
+      }
+
     case "LOGIN_STATUS":
       return {
         user: action.payload.user,
         logged_in: action.payload.logged_in,
-        admin: action.payload.admin
+        admin: action.payload.admin,
+        requesting: false
       }
 
     case "START_UPDATE_ACCOUNT":
@@ -61,7 +68,7 @@ export default function accountReducer(state = {logged_in: false, errors: null, 
         ...state,
         requesting: true
       }
-      
+
     default:
       return state
   }
