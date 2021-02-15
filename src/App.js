@@ -30,7 +30,7 @@ import Footer from "./components/Footer";
 
 class App extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loginStatus()
   }
 
