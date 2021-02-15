@@ -98,7 +98,7 @@ class App extends React.Component {
 
   render() {
     return(
-      <>{this.handleLoading}</>
+      <>{this.handleLoading()}</>
     )
   }
 };
