@@ -1,7 +1,7 @@
 export default function updateAccount(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_UPDATE_ACCOUNT' });
-        fetch(`https://riley-portfolio-api.herokuapp.com/users/${formData.id}`, {
+        fetch(`https://slayden-frontend.herokuapp.com//users/${formData.id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

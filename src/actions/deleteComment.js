@@ -1,7 +1,7 @@
 export default function deleteComment(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_FETCHING_POST' });
-        fetch(`https://riley-portfolio-api.herokuapp.com/comments`, {
+        fetch(`https://slayden-frontend.herokuapp.com//comments`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
