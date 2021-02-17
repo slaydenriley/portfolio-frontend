@@ -20,7 +20,7 @@ const Home = (props) => {
         <p>
           Hello, my name is Riley Slayden! I am an (almost) graduate of
           Flatiron School's software engineering course. The technologies I use include
-          Ruby on Rails, React/Redux. HTML/CSS/Javascript.</p>
+          Ruby on Rails, React/Redux, HTML/CSS/Javascript.</p>
         <p>
           Aside from coding, I am a huge outdoor enthusiast and musician. Being raised in Montana, I was exposed
           to skiing, fly-fishing, hiking, and camping. For a while, I toured the country as a professional banjo player
