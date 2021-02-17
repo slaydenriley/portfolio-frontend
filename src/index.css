@@ -74,6 +74,27 @@
       font-size: 12px;
     }
 
+    .projects, .dashboard, .posts, .resume {
+      padding: 30px 10%;
+      text-align: center;
+    }
+
+    .comment-input input, .comment-input textarea {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 94%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .post-list {
+      width: 300px;
+      padding: 20px;
+      background: black;
+      height: 350px;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
 }
 
 @media screen
@@ -156,6 +177,29 @@
 
     .navbar-brand {
       display: inline-block;
+    }
+
+    .projects, .dashboard, .posts, .resume {
+      padding: 30px 10%;
+    }
+
+    .comment-input input, .comment-input textarea {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 600px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .post-list {
+      width: 300px;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: black;
+      margin-right: 30px;
+      float: left;
+      height: 350px;
+      overflow: hidden;
     }
   }
 
@@ -424,14 +468,6 @@ body {
   text-align: center;
 }
 
-.comment-input input, .comment-input textarea {
-  margin-top: 10px;
-  font-size: 20px;
-  width: 600px;
-  text-align: center;
-  padding: 10px;
-}
-
 .social {
   margin-top: 30px;
   color: white;
@@ -449,10 +485,6 @@ body {
 
 .line {
   border: 2px solid #bfbfbf;
-}
-
-.projects, .dashboard, .posts, .resume {
-  padding: 30px 10%;
 }
 
 .projects h1, .posts h1, .resume h1, .dashboard h1 {
@@ -505,16 +537,6 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked {
     background: green;
-}
-.post-list {
-  width: 300px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background: black;
-  margin-right: 30px;
-  float: left;
-  height: 350px;
-  overflow: hidden;
 }
 
 .dashboard-components {
