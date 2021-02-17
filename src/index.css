@@ -1,3 +1,5 @@
+
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -60,18 +62,6 @@
     iframe {
       width: 100%;
       height: 100%;
-    }
-
-    .navbar-brand {
-      display: none!important;
-    }
-
-    .navbar a {
-      font-size: 12px;
-    }
-
-    .ml-auto a {
-      font-size: 12px;
     }
 
     .projects, .dashboard, .posts, .resume {
@@ -203,6 +193,9 @@
     }
   }
 
+.navbar-toggler {
+  background-color: grey!important;
+}
 
 .app {
   background: #222436;
