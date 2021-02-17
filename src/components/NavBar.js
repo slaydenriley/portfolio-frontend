@@ -6,65 +6,86 @@ const NavBar = props => {
   const logged_in = props.logged_in;
   const admin = props.admin
 
-  const navtype = () => {
-    if (logged_in === true) {
-      if (admin === true) {
-        return (
-          <div>
-            <Navbar className="container-fluid fixed-top">
-              <Navbar.Brand className="font-weight-bold text-muted">
-                Riley Slayden
-                </Navbar.Brand>
-                <NavLink exact={true} to="/">Home</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/posts">Blog</NavLink>
-                <NavLink to="/resume">Resume</NavLink>
-                <div className="ml-auto">
-                  <NavLink to="/dashboard">Dashboard</NavLink>
-                  <NavLink to="/logout">Logout</NavLink>
-                </div>
-            </Navbar>
-          </div>
-        )
-      }
-      else {
-        return (
-          <div>
-            <Navbar className="container-fluid fixed-top">
-              <Navbar.Brand className="font-weight-bold text-muted">
-                Riley Slayden
-                </Navbar.Brand>
-                <NavLink exact={true} to="/">Home</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/posts">Blog</NavLink>
-                <NavLink to="/resume">Resume</NavLink>
-                <div className="ml-auto">
-                  <NavLink to="/account/edit">My Profile</NavLink>
-                  <NavLink to="/logout">Logout</NavLink>
-                </div>
-            </Navbar>
-          </div>
-        )
-      }
-    }
-    else {
-      return (
-        <div>
-          <Navbar className="fixed-top">
-            <Navbar.Brand className="font-weight-bold text-muted">
-              Riley Slayden
+  const logged_in_nav = () => {
+    return (
+      <div>
+        <Navbar className="container-fluid fixed-top" expand="md">
+          <Navbar.Brand className="font-weight-bold text-muted">
+            Riley Slayden
             </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
             <NavLink exact={true} to="/">Home</NavLink>
             <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/posts">Blog</NavLink>
             <NavLink to="/resume">Resume</NavLink>
-              <div className="ml-auto">
-                <NavLink to="/signup">Create Account</NavLink>
-                <NavLink to="/login">Login</NavLink>
-              </div>
-          </Navbar>
-        </div>
-      )
+            <div className="ml-auto">
+              <NavLink to="/account/edit">My Profile</NavLink>
+              <NavLink to="/logout">Logout</NavLink>
+            </div>
+            </Navbar.Collapse>
+        </Navbar>
+      </div>
+    )
+  }
+
+  const logged_in_admin = () => {
+    return (
+      <div>
+        <Navbar className="container-fluid fixed-top" expand="md">
+        <Navbar.Brand className="font-weight-bold text-muted">
+          Riley Slayden
+          </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <NavLink exact={true} to="/">Home</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
+            <NavLink to="/posts">Blog</NavLink>
+            <NavLink to="/resume">Resume</NavLink>
+            <div className="ml-auto">
+              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/logout">Logout</NavLink>
+            </div>
+            </Navbar.Collapse>
+        </Navbar>
+      </div>
+    )
+  }
+
+  const not_logged = () => {
+    return (
+      <div>
+        <Navbar className="container-fluid fixed-top" expand="md">
+          <Navbar.Brand className="font-weight-bold text-muted">
+            Riley Slayden
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+          <NavLink exact={true} to="/">Home</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/posts">Blog</NavLink>
+          <NavLink to="/resume">Resume</NavLink>
+            <div className="ml-auto">
+              <NavLink to="/signup">Create Account</NavLink>
+              <NavLink to="/login">Login</NavLink>
+            </div>
+            </Navbar.Collapse>
+        </Navbar>
+      </div>
+    )
+  }
+
+  const navtype = () => {
+    if (logged_in === true) {
+      if (admin === true) {
+        return logged_in_admin()
+      }
+      else {
+        return logged_in_nav()
+      }
+    }
+    else {
+      return not_logged()
     }
   }
 
@@ -76,8 +97,4 @@ const NavBar = props => {
   );
 };
 
-
-
 export default NavBar;
-
-//<NavLink to="/account">Account</NavLink>
