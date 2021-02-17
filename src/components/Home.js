@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import picture from '../images/ProfilePic.jpeg'
 
 const Home = (props) => {
   return (
     <div className="home">
       <div className="home-left">
-        <img src={picture} alt="Headshot"/>
+        <img src="https://i.imgur.com/o8oMm9i.jpg" alt="Riley Slayden Headshot"/>
         <div className="social">
           <h2>Riley Slayden</h2>
           <p>Missoula, MT</p>
@@ -23,8 +22,9 @@ const Home = (props) => {
           Flatiron School's software engineering course. The technologies I use include
           Ruby on Rails, React/Redux. HTML/CSS/Javascript.</p>
         <p>
-          Aside from coding, I am a huge outdoor enthusiast. Being raised in Montana, I was exposed
-          to skiing, fly-fishing, hiking, camping, to mention a few.
+          Aside from coding, I am a huge outdoor enthusiast and musician. Being raised in Montana, I was exposed
+          to skiing, fly-fishing, hiking, and camping. For a while, I toured the country as a professional banjo player
+          with the band "National Park Radio."
         </p>
         <hr className="line"/>
         <div class="home-cards">
