@@ -1,7 +1,7 @@
 @media only screen
   and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  {
+  and (max-device-width: 667px) {
+
     .home-left {
       display: inline-block;
       width: 100%;
@@ -82,6 +82,25 @@
       height: 350px;
       overflow: hidden;
       margin: 0 auto 20px;
+    }
+
+    .rich-text-editor {
+      margin: auto;
+      width: 100%;
+      border: 3px solid white;
+      padding: 10px;
+    }
+
+    .edit-post-list, .user-list {
+      text-align: left;
+      width: 100%;
+    }
+
+    .edit-form input {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 100%;
+      padding: 10px;
     }
 }
 
@@ -188,7 +207,36 @@
       float: left;
       height: 350px;
       overflow: hidden;
+    }
 
+    .rich-text-editor {
+      margin: auto;
+      width: 70%;
+      border: 3px solid white;
+      padding: 10px;
+    }
+
+    .edit-post-list, .user-list {
+      text-align: left;
+      width: 50%;
+    }
+
+    .edit-form input {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 400px;
+      padding: 10px;
+    }
+
+    .row-1 {
+      flex: 1;
+      width: 50%;
+      float: right;
+    }
+
+    .row-2 {
+      flex: 2;
+      width: 50%;
     }
   }
 
@@ -227,23 +275,12 @@ body {
   margin: auto
 }
 
-.row-1 {
-  flex: 1;
-  width: 50%;
-  float: right;
-}
-
-.row-2 {
-  flex: 2;
-  width: 50%;
-}
-
 .app-body {
   padding-top: 56px;
   display: inline-block;
   padding-bottom: 20vh;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .ql-syntax {
@@ -278,24 +315,12 @@ body {
   min-height: 300px;
 }
 
-.edit-post-list, .user-list {
-  text-align: left;
-  width: 50%;
-}
-
 .user-select {
   font-size: 18px;
   padding: 2px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 30%;
-}
-
-.rich-text-editor {
-  margin: auto;
-  width: 70%;
-  border: 3px solid white;
-  padding: 10px;
 }
 
 .edit-post-button, .delete-post-button, .delete {
@@ -362,13 +387,6 @@ body {
 
 .edit-form {
   margin-top: 30px;
-}
-
-.edit-form input {
-  margin-top: 10px;
-  font-size: 20px;
-  width: 400px;
-  padding: 10px;
 }
 
 .login input, .new-post input, .new-post select, .signup-form input {
