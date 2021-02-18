@@ -243,6 +243,7 @@ body {
   display: inline-block;
   padding-bottom: 20vh;
   width: 100%;
+  min-height: 80vh;
 }
 
 .ql-syntax {
