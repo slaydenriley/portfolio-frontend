@@ -19,7 +19,7 @@
 
     .home-card {
       text-align: center;
-      width: 200px;
+      width: 80%;
       background-color: #00010a;
       color: #bfbfbf;
       line-height: 100px;
@@ -30,10 +30,20 @@
       border-radius: 10px;
       height: 100px;
       font-style: italic;
-      font-size: 30px;
+      font-size: 50px;
       display: inline-block;
       justify-content: center;
       align-items: center;
+    }
+
+    .home-card:hover {
+      text-decoration: none;
+      font-style: italic;
+      color: lightblue;
+      transform: scale(1.1);
+      transition: 0.5s;
+      border: 2px solid lightblue;
+      filter: drop-shadow(0 0 0.75rem lightblue);
     }
 
     .single-post img {
