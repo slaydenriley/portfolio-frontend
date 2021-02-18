@@ -200,8 +200,6 @@
 .app {
   background: #222436;
   color: #bfbfbf;
-  position: relative;
-  min-height: 100vh;
 }
 
 body {
