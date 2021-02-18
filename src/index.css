@@ -188,6 +188,7 @@
       float: left;
       height: 350px;
       overflow: hidden;
+
     }
   }
 
@@ -226,15 +227,6 @@ body {
   margin: auto
 }
 
-.flex {
-  display: flex;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: masonry;
-}
 .row-1 {
   flex: 1;
   width: 50%;
@@ -250,6 +242,7 @@ body {
   padding-top: 56px;
   display: inline-block;
   padding-bottom: 20vh;
+  width: 100%;
 }
 
 .ql-syntax {
