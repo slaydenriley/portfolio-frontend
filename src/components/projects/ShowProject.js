@@ -1,4 +1,3 @@
-import {strftime} from 'strftime'
 import React from 'react';
 
 const ShowProject = props => {
