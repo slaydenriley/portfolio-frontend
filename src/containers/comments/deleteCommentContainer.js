@@ -9,11 +9,9 @@ class DeleteCommentContainer extends React.Component {
     event.preventDefault()
 
     if (window.confirm("Are you sure you want to delete this comment?")) {
-      let id = event.target.id
-      let post_id = event.target.value
       let formData = {
         comment: {
-          id: id,
+          id: event.target.id,
           post_id: this.props.post_id
         }
       }

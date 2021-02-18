@@ -4,7 +4,6 @@ import fetchSinglePost from '../../actions/fetchSinglePost'
 import ShowProject from '../../components/projects/ShowProject'
 import CommentsContainer from '../../containers/comments/commentsContainer'
 import { BlockReserveLoading } from 'react-loadingg';
-import AddCommentContainer from '../../containers/comments/addCommentContainer'
 
 class SingleProjectContainer extends React.Component {
 

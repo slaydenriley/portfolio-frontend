@@ -1,9 +1,7 @@
 import React from 'react'
 import CommentInput from '../../components/comments/CommentInput'
-import Comments from '../../components/comments/Comments'
 import {connect} from 'react-redux'
 import addComment from '../../actions/addComment'
-import deleteComment from '../../actions/deleteComment'
 
 class AddCommentContainer extends React.Component {
   state = {

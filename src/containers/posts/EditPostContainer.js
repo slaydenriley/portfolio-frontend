@@ -2,11 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import fetchPosts from '../../actions/fetchPosts'
 import deletePost from '../../actions/deletePost'
-import PostEditor from '../../components/posts/PostEditor'
-import {Link, Redirect} from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
 import { BlockReserveLoading } from 'react-loadingg';
-import EditSinglePostContainer from './EditSinglePostContainer'
 import EditPostList from '../../components/posts/EditPostList'
 
 class EditPostContainer extends React.Component {

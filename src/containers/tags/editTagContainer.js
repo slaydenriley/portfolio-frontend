@@ -1,10 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Link, Redirect} from 'react-router-dom'
 import fetchTags from '../../actions/fetchTags'
 import deleteTag from '../../actions/deleteTag'
 import addNewTag from '../../actions/addNewTag'
-import { useHistory } from 'react-router-dom'
 import { BlockReserveLoading } from 'react-loadingg';
 import TagEditor from '../../components/tags/TagEditor'
 import Tags from '../../components/tags/Tags'

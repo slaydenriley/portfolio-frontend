@@ -41,7 +41,7 @@ class ProjectList extends React.Component {
               <Link to={`/projects/${post.id}`}>
                 <em>{post.title}</em>
                 <hr className="line"/>
-                <img src={`${post.image_link}`}/><br/>
+                <img alt="" src={`${post.image_link}`}/><br/>
               </Link>
             </div>)}
         </div>

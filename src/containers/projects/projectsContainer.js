@@ -4,7 +4,6 @@ import fetchPosts from '../../actions/fetchPosts'
 import fetchTags from '../../actions/fetchTags'
 import ProjectList from '../../components/projects/ProjectList'
 import { BlockReserveLoading } from 'react-loadingg'
-import ProjectFilter from '../../components/projects/ProjectFilter'
 
 class ProjectsContainer extends React.Component {
 

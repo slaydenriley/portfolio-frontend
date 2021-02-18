@@ -1,12 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import fetchPosts from '../../actions/fetchPosts'
 import editPost from '../../actions/editPost'
 import fetchSinglePost from '../../actions/fetchSinglePost'
 import fetchTags from '../../actions/fetchTags'
 import PostEditor from '../../components/posts/PostEditor'
 import { BlockReserveLoading } from 'react-loadingg';
-import { Redirect} from 'react-router-dom'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 

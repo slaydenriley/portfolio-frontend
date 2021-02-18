@@ -26,12 +26,11 @@ import EditTagContainer from './containers/tags/editTagContainer';
 import EditSinglePostContainer from './containers/posts/EditSinglePostContainer'
 import ManageUsersContainer from './containers/dashboard/manageUsersContainer'
 import loginStatus from './actions/loginStatus'
-import fetchPosts from './actions/fetchPosts'
 import Footer from "./components/Footer";
 
 class App extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loginStatus()
   }
 
