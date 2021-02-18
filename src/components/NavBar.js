@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {Navbar} from 'react-bootstrap'
 
 const NavBar = props => {
@@ -10,9 +10,9 @@ const NavBar = props => {
     return (
       <div>
         <Navbar className="container-fluid fixed-top" expand="md">
-          <Navbar.Brand className="font-weight-bold text-muted">
-            Riley Slayden
-            </Navbar.Brand>
+        <Navbar.Brand className="font-weight-bold text-muted">
+          <Link to="/">Riley Slayden</Link>
+          </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <NavLink exact={true} to="/">Home</NavLink>
@@ -34,7 +34,7 @@ const NavBar = props => {
       <div>
         <Navbar className="container-fluid fixed-top" expand="md">
         <Navbar.Brand className="font-weight-bold text-muted">
-          Riley Slayden
+          <Link to="/">Riley Slayden</Link>
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -56,8 +56,8 @@ const NavBar = props => {
     return (
       <div>
         <Navbar className="container-fluid fixed-top" expand="md">
-          <Navbar.Brand className="font-weight-bold text-muted">
-            Riley Slayden
+        <Navbar.Brand className="font-weight-bold text-muted">
+          <Link to="/">Riley Slayden</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
