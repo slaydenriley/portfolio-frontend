@@ -288,7 +288,7 @@ body {
 .app-body {
   padding-top: 56px;
   display: inline-block;
-  padding-bottom: 20vh;
+  padding-bottom: 80px;
   width: 100%;
   min-height: 100vh;
 }
