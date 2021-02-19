@@ -1,7 +1,7 @@
 export default function fetchSinglePost(id) {
   return (dispatch) => {
     dispatch({ type: 'START_FETCHING_POST' });
-    fetch(`https://slayden-backend.herokuapp.com/posts/${id}`)
+    fetch(`http://www.api.rileyslayden.com/posts/${id}`)
     .then(resp => resp.json())
     .then(post => dispatch({
       type: 'FETCH_SINGLE_POST',

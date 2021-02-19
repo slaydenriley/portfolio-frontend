@@ -1,7 +1,7 @@
 export default function addComment(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_FETCHING_POST' });
-        fetch(`https://slayden-backend.herokuapp.com/posts/${formData.post_id}/comments`, {
+        fetch(`http://www.api.rileyslayden.com/posts/${formData.post_id}/comments`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

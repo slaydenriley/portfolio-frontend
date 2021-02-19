@@ -1,7 +1,7 @@
 export default function addNewPost(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_EDIT_POST' });
-        fetch(`https://slayden-backend.herokuapp.com/posts/${formData.id}`, {
+        fetch(`http://www.api.rileyslayden.com/posts/${formData.id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

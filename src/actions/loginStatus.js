@@ -1,7 +1,7 @@
 export default function loginStatus() {
   return (dispatch) => {
     dispatch({ type: 'START_LOGIN_STATUS' });
-    fetch('https://slayden-backend.herokuapp.com/logged_in', {
+    fetch('http://www.api.rileyslayden.com/logged_in', {
       method: 'GET',
       credentials: 'include'})
       .then(res => res.json())

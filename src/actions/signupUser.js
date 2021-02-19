@@ -1,7 +1,7 @@
 export default function signupUser(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_SIGNUP' });
-        fetch(`https://slayden-backend.herokuapp.com/signup`, {
+        fetch(`http://www.api.rileyslayden.com/signup`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
