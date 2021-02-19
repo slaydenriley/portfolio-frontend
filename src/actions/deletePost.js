@@ -1,7 +1,7 @@
 export default function deletePost(post) {
     return (dispatch) => {
         dispatch({ type: 'START_DELETING_POST' });
-        fetch(`http://www.api.rileyslayden.com/posts`, {
+        fetch(`https://www.api.rileyslayden.com/posts`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

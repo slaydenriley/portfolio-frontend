@@ -1,7 +1,7 @@
 export default function signupUser(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_SIGNUP' });
-        fetch(`http://www.api.rileyslayden.com/signup`, {
+        fetch(`https://www.api.rileyslayden.com/signup`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

@@ -1,7 +1,7 @@
 export default function addComment(formData) {
     return (dispatch) => {
         dispatch({ type: 'START_FETCHING_POST' });
-        fetch(`http://www.api.rileyslayden.com/posts/${formData.post_id}/comments`, {
+        fetch(`https://www.api.rileyslayden.com/posts/${formData.post_id}/comments`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
