@@ -1,6 +1,6 @@
 @media only screen
   and (min-device-width: 375px)
-  and (max-device-width: 667px) {
+  and (max-device-width: 1199px) {
 
     .home-left {
       display: inline-block;
@@ -116,7 +116,7 @@
 
 @media screen
   and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
+  and (max-device-width: 4000px)
   and (-webkit-min-device-pixel-ratio: 1) {
     .home-left {
       flex: 1;
@@ -143,6 +143,7 @@
       line-height: 100px;
       margin-left: 20px;
       margin-right: 20px;
+      margin-bottom: 20px;
       float: left;
       border: 2px solid #bfbfbf;
       border-radius: 10px;
