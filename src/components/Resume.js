@@ -7,7 +7,7 @@ const Resume = () => {
       <em>Click image to download...</em>
       <hr className="line"/>
       <a href={resume} download>
-        <img alt="Resume" src="https://i.imgur.com/c8zgx4O.jpg"/>
+        <img alt="Resume" src="https://i.imgur.com/oqJk1Zg.jpg"/>
       </a>
     </div>
   )
