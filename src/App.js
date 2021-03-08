@@ -3,18 +3,12 @@ import NavBar from './components/NavBar.js'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './components/Home';
 import {connect} from 'react-redux'
-
-//import Posts
 import PostsContainer from './containers/posts/postsContainer';
 import SinglePostContainer from './containers/posts/singlePostContainer';
 import { BlockReserveLoading } from 'react-loadingg';
-
-//import Projects
 import ProjectsContainer from './containers/projects/projectsContainer';
 import SingleProjectContainer from './containers/projects/singleProjectContainer';
-
 import Resume from './components/Resume'
-
 import AccountContainer from './containers/dashboard/accountContainer'
 import LoginContainer from './containers/authorized/loginContainer';
 import SignupContainer from './containers/authorized/signupContainer'
@@ -27,12 +21,29 @@ import EditSinglePostContainer from './containers/posts/EditSinglePostContainer'
 import ManageUsersContainer from './containers/dashboard/manageUsersContainer'
 import loginStatus from './actions/loginStatus'
 import Footer from "./components/Footer";
+import CookieConsent, {
+  getCookieConsentValue,
+  Cookies,
+} from "react-cookie-consent";
+import { initGA } from "./ga-utils";
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.loginStatus()
   }
+
+  handleAcceptCookie = () => {
+    if (process.env.REACT_APP_GOOGLE_ANALYTICS_ID) {
+      initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+    }
+  };
+
+  handleDeclineCookie = () => {
+    Cookies.remove("_ga");
+    Cookies.remove("_gat");
+    Cookies.remove("_gid");
+};
 
   handleView = () => {
     if (this.props.logged_in) {
@@ -97,7 +108,13 @@ class App extends React.Component {
 
   render() {
     return(
-      <>{this.handleLoading()}</>
+      <>
+        {this.handleLoading()}
+        <CookieConsent enableDeclineButton onAccept={this.handleAcceptCookie} onDecline={this.handleDeclineCookie}>
+          Riley Slayden's portfolio website uses cookies to enhance the user experience.
+        </CookieConsent>
+
+      </>
     )
   }
 };
