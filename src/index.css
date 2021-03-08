@@ -602,3 +602,12 @@ input[type='checkbox']:checked {
   font-size: 18px;
   color: lightblue;
 }
+
+.CookieConsent {
+  z-index: 2000;
+}
+
+#rcc-confirm-button {
+  color: black;
+  background: green
+}
