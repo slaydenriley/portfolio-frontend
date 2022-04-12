@@ -18,9 +18,18 @@ const Home = (props) => {
         <h1>Biography</h1>
         <hr className="line"/>
         <p>
-          Hello, my name is Riley Slayden! I am an (almost) graduate of
-          Flatiron School's software engineering course. The technologies I use include
-          Ruby on Rails, React/Redux, HTML/CSS/Javascript.</p>
+          Hello, my name is Riley Slayden! I am a software test engineer based out of Missoula, MT. I graduated from Flatiron
+          School's software engineering course in 2021, where I learned a multitude of technologies including Ruby on Rails, HTML/CSS/Javascript,
+          React/Redux, and SQL.
+        </p>
+
+        <p>
+          In my current position as a test engineer at Submittable, I write automated UI tests using TestCafe and JS and manage
+          our smoke test project. These automated tests run daily with deployments. In addition to this, I frequently utilize
+          AWS ECS Fargate containers for running automated UI tests and load tests on the Submittable's application. Other duties include
+          deploying daily, manual testing, writing tickets in Jira, and PR reviews for other test engineers.
+        </p>
+
         <p>
           Aside from coding, I am a huge outdoor enthusiast and musician. Being raised in Montana, I was exposed
           to skiing, fly-fishing, hiking, and camping. For a while, I toured the country as a professional banjo player
